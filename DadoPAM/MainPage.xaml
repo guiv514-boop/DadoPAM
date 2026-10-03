@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DadoPAM.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label
+                 Text="ROLADOR DE DADOS"
+                 Style="{StaticResource Headline}"
+                 SemanticProperties.HeadingLevel="Level1" />    
+
+            <Image
+                x:Name="ImagemDado"
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+
+
+            <Label
+           Text=""
+           x:Name="ResultadoLabel"
+           SemanticProperties.HeadingLevel="Level1"
+           SemanticProperties.Description="Resultado"/>
+            
+          
+
+
+            <Picker
+         SelectedIndexChanged="picker_SelectedIndexChanged"
+         x:Name="picker"
+         Title="QUANTIDADE DE LADOS"> 
+         
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+              
+            </Picker>
+
+
+            <Button
+             x:Name="SortearButton"
+             Text="ROLAR DADO"
+             Clicked="SortearButton_Clicked"/>
+
+               
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
